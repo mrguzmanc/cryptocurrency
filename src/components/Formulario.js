@@ -4,6 +4,7 @@ import Error from "./Error";
 import useMoney from "../hooks/useMoney";
 import useCryptomoney from "../hooks/useCryptomoney";
 import axios from "axios";
+import { Fonts } from "./../fonts/utils/constant";
 
 const Button = styled.input`
   margin-top: 20px;
@@ -16,6 +17,8 @@ const Button = styled.input`
   border-radius: 10px;
   color: #fff;
   transition: background-color 0.3s ease;
+  font-family: ${Fonts.normalJosefin};
+  text-transform: uppercase;
 
   &:hover {
     background-color: #326ac0;
@@ -34,11 +37,7 @@ const Formulario = ({ saveCurrency, saveCryptoCurrency }) => {
   ];
 
   // Use useMoney
-  const [state, Select, updateState] = useMoney(
-    "Choose a currency",
-    "",
-    Currency
-  );
+  const [state, Select] = useMoney("Choose a currency", "", Currency);
 
   // Use Criptomoney
   const [cryptomoney, SelectCrypto] = useCryptomoney(
