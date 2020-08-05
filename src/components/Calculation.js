@@ -23,7 +23,7 @@ const Calculation = ({ result }) => {
   return (
     <ResultDiv>
       <Price>
-        The pricen is: <span> {result.PRICE}</span>
+        The price is: <span> {result.PRICE}</span>
       </Price>
       <Paragraph>
         Highest price of the day: <span>{result.HIGHDAY}</span>
